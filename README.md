@@ -1,200 +1,76 @@
-\# 📚 Online Book Store – Backend (Spring Boot)
+# 📚 Online Bookstore Backend
 
-
-
-This is the \*\*backend API\*\* for the Online Book Store full stack project, built using \*\*Spring Boot (Java)\*\*. It provides RESTful endpoints for managing books and interacts with a MySQL database. The backend is designed to work with a React.js frontend.
-
-
+A simple Spring Boot application to manage books for an online bookstore.
 
 ---
 
-
-
-\## 🚀 Tech Stack
-
-
-
-\- Java 17+
-
-\- Spring Boot
-
-\- Spring Data JPA
-
-\- MySQL
-
-\- RESTful APIs
-
-
-
----
-
-
-
-\## 📌 Features
-
-
-
-\- View all books
-
-\- Add a new book
-
-\- REST API integration with React frontend
-
-\- Database operations using Spring Data JPA
-
-
-
----
-
-
-
-\## 📂 Project Structure
-
-
-
-online-bookstore-backend/
-
-├── src/
-
-│   └── main/
-
-│       ├── java/
-
-│       │   └── com/onlinebookstore/
-
-│       │       ├── controller/
-
-│       │       │   └── BookController.java
-
-│       │       ├── model/
-
-│       │       │   └── Book.java
-
-│       │       ├── repository/
-
-│       │       │   └── BookRepository.java
-
-│       │       └── OnlineBookstoreApplication.java
-
-│       └── resources/
-
-│           └── application.properties
-
-├── .gitignore
-
-├── pom.xml
-
-├── mvnw / mvnw.cmd
-
-
-
-
-
-
-
----
-
-
-
-\## 📡 API Endpoints
-
-
-
-| Method | Endpoint       | Description       |
-
-|--------|----------------|-------------------|
-
-| GET    | `/books`       | Get all books     |
-
-| POST   | `/books`       | Add a new book    |
-
-| DELETE | `/books/{id}`  | Delete a book     |
-
-
-
-> JSON Example:
+## 📌 Sample Book JSON
 
 ```json
-
 {
-
-&nbsp; "id": 1,
-
-&nbsp;   "title": "Too Good to Be True",
-
-&nbsp;   "author": "Prajakta",
-
-&nbsp;   "price": 267,
-
-&nbsp;   "category": "Rom-Com"
-
+  "id": 1,
+  "title": "Too Good to Be True",
+  "author": "Prajakta",
+  "price": 267,
+  "category": "Rom-Com"
 }
 
 
 
+🚀 How to Run the Project
+Prerequisites
+Java 17+
 
+MySQL
 
-Steps:
+Maven
 
-1\. Clone the repository
+Any IDE (Eclipse or IntelliJ)
 
-2\. Open in Eclipse or IntelliJ
+---
 
-3\. Configure `application.properties` with your MySQL credentials
+🛠️ Steps
+1.Clone the repository
+    git clone https://github.com/vaishu003/online-bookstore-backend.git
 
-4\. Run the main class: OnlineBookstoreApplication.java
+2.Open the project in your IDE (Eclipse or IntelliJ)
 
+3.Configure the database
+    Go to src/main/resources/application.properties
+    Add your MySQL username, password, and DB name
 
+4.Run the project
+    Run the file DemoApplication.java
 
+---
 
+📂 Project Structure
 
-Backend will start at:
-
-http://localhost:8080
-
-
-
-
-
-🔗 Frontend Repo
-
-React Frontend: Online Bookstore Frontend
-
-
-
-
-
-👩‍💻 Author
-
-Vaishnavi Bakka
-
-Java Full Stack Developer | React | Spring Boot | MySQL
-
-GitHub: vaishu003
-
-
-
-
-
+src/
+ └── main/
+     ├── java/
+     │   └── com.onlinebookstore.demo/
+     │       ├── entity/
+     │       │   └── Book.java
+     │       ├── repository/
+     │       │   └── BookRepository.java
+     │       ├── controller/
+     │       │   └── BookController.java
+     │       └── DemoApplication.java
+     └── resources/
+         └── application.properties
 
 
 ---
 
 
-
-\### ✅ How to Add It to Your Repo:
-
+📡 API Endpoints
 
 
-1\. In your backend project folder:
+| Method | Endpoint | Description    |
 
-&nbsp;  ```bash
-
-&nbsp;  cd E:\\demo\\demo
-
-&nbsp;  notepad README.md
-
-
+| GET    | `/books` | Get all books  |
+| POST   | `/books` | Add a new book |
 
 
 
